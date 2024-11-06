@@ -6,6 +6,8 @@ import Image from "next/image";
 import NewsList from "@/app/_components/NewsList";
 import ButtonLink from "@/app/_components/ButtonLink";
 
+export const revalidate = 60;
+
 export default async function Home() {
 
     const data = await getNewsList({
