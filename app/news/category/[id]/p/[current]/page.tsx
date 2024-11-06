@@ -18,6 +18,8 @@ export default async function Page({ params }: Props) {
         notFound();
     }
 
+    const category = await getCategoryDetail(params.id).catch(notFound);
+    
     const { contents: news, totalCount } = await getNewsList({
         filters: `category[equals]${category.id}`,
         limit: NEWS_LIST_LIMIT,
