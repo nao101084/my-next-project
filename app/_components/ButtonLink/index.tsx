@@ -1,4 +1,3 @@
-import { Props } from "next/script";
 import styles from "./index.module.css";
 
 type Props = {
